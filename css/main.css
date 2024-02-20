@@ -182,15 +182,30 @@ div[title$="first"] {
 
 
 /* CSS DISPLAYS */
+.block-level {
+    border:5px solid black;
+}
 
+.block-level>h3 {
+    display: inline;
+    /*Override default display of block*/
+    border: 3px solid magenta;
+}
 
+#displays >p > a {
+    text-decoration:none;
+    border: 3px solid pink;
 
+}
 /* 
     Display: None
     Used to hide an element. Commonly used with JavaScript 
 */
 
-
+#middle {
+    border:30px solid teal;
+    display: none;
+}
 
 /* CSS POSITIONS */
 
