@@ -90,48 +90,91 @@ aside + h4 + h3 {
 /* Pseudo-class Selector - Select elements based on a certain state */
 /* selector:pseudo-class{} */
 
+.selectors > a {
+    border: 2px solid blueviolet;
+    padding: 4px;
+
+}
 /* unvisited link */
-
+.selectors > a:link {
+    color:red;
+}
 /* visited link */
-
+.selectors > a:visited {
+    color: #557a95;
+}
 /* mouse over link */
-
+.selectors > a:hover {
+    color: #66FCF1;
+}
 /* selected link */
+.selectors > a:active {
+    color:#2E151B}
 
-
+/* nth-child(n) */
+.child-example > p:nth-child(1) {
+    color: orange;
+}
 
 
 /* Pseudo Elements - used to style specified parts of an element */
 /* selector::psuedo-element{} */
 
+#first-line::first-line {
+    color: blue;
+    font-variant: small-caps;
+}
 
+#first-line::first-letter {
+    color: red;
+}
 
+/* ::before or ::after will add content before or after the content of an element */
+#before-example::before {
+    content: url('https://picsum.photos/100');
+}
 
 /* Attribute Selectors - style HTML elements that have specific attributes or attribute values */
 /* selector[attribute]{} */
 
 /* CSS [attribute] Selector */
+/*matches any elemenet that has that attrivute */
+div[title] {
+    background-color: crimson;
+    border-radius:5px;
+    border: 6px solid grey;
+}
 
 
 /* CSS [attribute="value"] Selector */
 /* matches the value exactly */
-
+div[title="border"] {
+    text-align: center;
+}
 
 /* CSS [attribute~="value"] Selector */
 /* matches the value containing a specified word */
-
+div [title~="border"] {
+    font-variant: small-caps;
+}
 
 /* CSS [attribute|="value"] Selector */
 /* matches a value or a value followed by a hyphen */
-
+div[title|="border"] {
+    background-color: white
+    }
 
 /* CSS [attribute^="value"] Selector */
 /* matches if the value starts with the specified value */
-
+div[title^="border"] {
+    color: red;
+}
 
 /* CSS [attribute$="value"] Selector */
 /* matches if the value ends with the specified value */
-
+div[title$="first"] {
+    color:white;
+}
 
 /* CSS [attribute*="value"] Selector */
 /* matches contains the specified value */
